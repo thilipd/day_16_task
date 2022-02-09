@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'samkaran';
+    src: url('./font/SAMAN___.ttf');
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(174, 174, 174);
+    font-family: 'Quintessential', cursive;
+
+    font-size: 20px;
+
+}
+
+.container {
+    width: 90vw;
+
+}
+
+nav div img {
+    width: 20px;
+    height: 20px
+}
+
+nav {
+    background-image: url('./images/Chakras_map.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 500px;
+    margin-top: 40px;
+    position: relative;
+}
+
+nav div {
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 51%;
+    width: 100px;
+    height: 100px;
+    margin: -51px;
+}
+
+.sahasrara {
+    transform: rotate(271deg) translate(251px) rotate(-271deg);
+}
+
+.ajna {
+    transform: rotate(226deg) translate(251px) rotate(-226deg);
+}
+
+.vishuddhi {
+    transform: rotate(316deg) translate(251px) rotate(-316deg);
+}
+
+.anhatha {
+    transform: rotate(181deg) translate(251px) rotate(-181deg);
+}
+
+.manipura {
+    transform: translate(251px);
+}
+
+.swadhisthana {
+    transform: rotate(136deg) translate(251px) rotate(-136deg);
+}
+
+.muladhara {
+    transform: rotate(46deg) translate(251px) rotate(-46deg);
+}
+
+.muladharatest {
+    transform: rotate(91deg) translate(251px) rotate(-91deg);
+}
+
+.main {
+
+    margin-top: 60px;
+}
+
+
+article {
+
+    margin-top: 15px;
+    padding: 5px;
+}
+
+article img {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+}
+
+article:nth-child(odd) img {
+    float: right;
+}
+
+article:nth-child(even) img {
+    float: left;
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 15px;
+
+}
+
+
+h2,
+h3,
+p {
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: rgb(94, 94, 247);
+}
+
+h3 {
+    color: rgb(17, 165, 206);
+}
+
+table {
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+th {
+    width: 350px;
+}
+
+th,
+tr {
+    margin-bottom: 15px;
+}
+
+table tr img {
+    width: 60px;
+    height: 60px;
+}

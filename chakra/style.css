@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -15,11 +16,56 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: rgb(174, 174, 174);
+    justify-content: center;
+    align-content: center;
+    color: rgb(44, 40, 40);
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    background-color: rgb(255, 255, 0);
+
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+header h1 {
+    font-size: 50px;
+    color: rgb(130, 7, 246);
+}
+
+nav ul {
+    margin-top: 30px;
+    display: inline-flex;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+a {
+    color: rgb(70, 2, 134);
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: rgb(246, 16, 0)
+}
+
+nav ul li a {
+    display: inline;
+    padding-right: 20px;
+
+}
+
+h1,
+h2,
+h3 {
     font-family: 'Quintessential', cursive;
-
-    font-size: 20px;
-
 }
 
 .container {
@@ -27,12 +73,29 @@ body {
 
 }
 
-nav div img {
+.nav_chakras div img {
     width: 20px;
-    height: 20px
+    height: 20px;
+    margin-right: 10px;
+
 }
 
-nav {
+.nav_chakras div img:hover {
+    animation: icons 4s;
+}
+
+@keyframes icons {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+.nav_chakras {
     background-image: url('./images/Chakras_map.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -41,47 +104,60 @@ nav {
     position: relative;
 }
 
-nav div {
-    display: block;
+.nav_chakras div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 60%;
     left: 51%;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 50px;
     margin: -51px;
 }
 
+.nav_chakras div a {
+    text-decoration: none;
+    margin-right: 10px;
+
+}
+
 .sahasrara {
-    transform: rotate(271deg) translate(251px) rotate(-271deg);
+    transform: rotate(261deg) translate(251px) rotate(-261deg);
+}
+
+.bindu {
+
+    transform: rotate(322deg) translate(231px) rotate(-322deg);
 }
 
 .ajna {
-    transform: rotate(226deg) translate(251px) rotate(-226deg);
+    transform: rotate(216deg) translate(261px) rotate(-216deg);
 }
 
 .vishuddhi {
-    transform: rotate(316deg) translate(251px) rotate(-316deg);
+    transform: translate(241px);
+
 }
 
 .anhatha {
-    transform: rotate(181deg) translate(251px) rotate(-181deg);
+    transform: rotate(181deg) translate(261px) rotate(-181deg);
 }
 
 .manipura {
-    transform: translate(251px);
+
+    transform: rotate(40deg) translate(251px) rotate(-40deg);
 }
 
 .swadhisthana {
-    transform: rotate(136deg) translate(251px) rotate(-136deg);
+    transform: rotate(146deg) translate(295px) rotate(-146deg);
 }
 
 .muladhara {
-    transform: rotate(46deg) translate(251px) rotate(-46deg);
+
+    transform: rotate(91deg) translate(221px) rotate(-91deg);
 }
 
-.muladharatest {
-    transform: rotate(91deg) translate(251px) rotate(-91deg);
-}
 
 .main {
 
@@ -96,8 +172,8 @@ article {
 }
 
 article img {
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     margin: 10px;
 }
 
@@ -109,6 +185,8 @@ article:nth-child(even) img {
     float: left;
 }
 
+
+
 ul {
     list-style: none;
     padding-left: 20px;
@@ -117,18 +195,18 @@ ul {
 }
 
 
-h2,
-h3,
-p {
+.main h2,
+.main h3,
+.main p {
     margin-bottom: 10px;
 }
 
 h2 {
-    color: rgb(94, 94, 247);
+    color: rgb(6, 6, 144);
 }
 
 h3 {
-    color: rgb(17, 165, 206);
+    color: rgb(35, 1, 231);
 }
 
 table {
@@ -148,4 +226,215 @@ tr {
 table tr img {
     width: 60px;
     height: 60px;
+    animation-name: tableImage;
+    animation-duration: 6s;
+    animation-iteration-count: 3;
+    animation-delay: 1s;
+}
+
+@keyframes tableImage {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+.display_image {
+    background-image: url('./image_1.jpeg');
+    min-height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.events {
+
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-top: 80px;
+    color: rgb(44, 40, 40);
+    align-items: center;
+
+}
+
+.block_title {
+    width: 100%;
+    font-size: 2em;
+    position: absolute;
+    top: 0;
+    text-align: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    margin: 50px 20px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+.card:hover {
+    box-shadow: 10px 8px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card .title {
+    color: grey;
+    font-size: 18px;
+}
+
+.card img {
+    width: 250px;
+    height: 250px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: rgb(46, 126, 255);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+
+}
+
+
+.card .sold {
+    background-color: rgb(231, 39, 39);
+}
+
+a {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card table {
+    padding: 5px;
+    font-size: .8em;
+
+}
+
+.table_head {
+    text-align: center;
+    font-size: 1.4em;
+    padding-bottom: 5px;
+    font-family: 'Quintessential', cursive;
+    text-decoration: underline;
+}
+
+.table_head:hover {
+    color: rgb(0, 0, 149);
+    text-decoration: none;
+}
+
+.card table tr td:first-child {
+    font-size: 1em;
+    padding: 2px;
+}
+
+.card table tr td {
+    width: 150px;
+}
+
+
+
+/* Media qurey */
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .nav_chakras {
+        background-image: url('./images/Chakras_map.svg');
+        background-repeat: no-repeat;
+        background-position: left;
+        min-height: 500px;
+        margin-top: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    .nav_chakras div {
+        position: static;
+        margin: 0;
+        justify-content: flex-start;
+        margin-top: 20px;
+    }
+
+    .sahasrara,
+    .bindu,
+    .ajna,
+    .vishuddhi,
+    .anhatha,
+    .manipura,
+    .swadhisthana,
+    .muladhara {
+        transform: none;
+    }
+
+    .display_image {
+        min-height: 250px;
+    }
+
+    .block_title {
+        font-size: 1em;
+    }
+
+    .events {
+        justify-content: center;
+    }
+
+    article img {
+        margin: 0;
+    }
+
+    .card {
+
+        max-width: 200px;
+        max-height: 400px;
+        margin: auto;
+        text-align: center;
+        margin: 25px 10px 10px;
+        border-radius: 5px;
+        overflow: hidden;
+
+    }
+
+    .card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card button {
+
+
+        padding: 4px;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        height: 40px;
+        font-size: 18px;
+
+    }
+
+    .card table tr td {
+        width: 70px;
+    }
+
+
 }
